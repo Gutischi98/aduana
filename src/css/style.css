@@ -95,3 +95,75 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+body {
+  /* background-image: url("../img/import.jpg"); */
+  /* background-image: url("../img/containers.jpg");
+  background-size: cover;
+  background-repeat: repeat-x; */
+  background-color: #C8C5D9;
+
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#divEmpresa,
+#divFormImportacion {
+/* From https://css.glass */
+  background: rgba(36, 116, 166, 0.77);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(36, 116, 166, 0.24);
+ 
+}
+#divEmpresa label, #divEmpresa h2,
+#divFormImportacion label, #divFormImportacion h2, #divTablas h2{
+  color: white;
+}
+
+
+
+nav, nav a{
+  background-color: #2474A6;
+  color: white!important;
+}
+
+button {
+  background-color: #0B508C!important;
+  border-color: #0B508C!important;
+}
+button:hover{
+  background-color: #033E8C!important;
+  border-color: #033E8C!important;
+}
+
+
+.oculto {
+  display: none;
+}
+
+.mostrar {
+  animation: aparecer 1s;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
