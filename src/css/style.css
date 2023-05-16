@@ -102,7 +102,7 @@ body {
   /* background-image: url("../img/containers.jpg");
   background-size: cover;
   background-repeat: repeat-x; */
-  background-color: #C8C5D9;
+  background-color: #78BBCB;
 
 }
 
@@ -117,15 +117,15 @@ input[type=number] {
   appearance: textfield;
 }
 
-#divEmpresa,
-#divFormImportacion {
+
+.modal-content {
 /* From https://css.glass */
-  background: rgba(36, 116, 166, 0.77);
-  border-radius: 16px;
+  background: #3e7280ea;
+  /* border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.4px);
   -webkit-backdrop-filter: blur(4.4px);
-  border: 1px solid rgba(36, 116, 166, 0.24);
+  border: 1px solid rgba(36, 116, 166, 0.24); */
  
 }
 #divEmpresa label, #divEmpresa h2,
@@ -136,20 +136,20 @@ input[type=number] {
 
 
 nav, nav a{
-  background-color: #2474A6;
+  background-color: #CC8DA3;
   color: white!important;
 }
 
 button {
-  background-color: #0B508C!important;
-  border-color: #0B508C!important;
+  background-color: #CC8DA3!important;
+  border-color: #CC8DA3!important;
 }
 button:hover{
-  background-color: #033E8C!important;
-  border-color: #033E8C!important;
+  background-color: #a17082!important;
+  border-color: #a17082!important;
 }
 
-
+/* 
 .oculto {
   display: none;
 }
@@ -166,4 +166,4 @@ button:hover{
   to {
     opacity: 1;
   }
-}
+} */

@@ -20,71 +20,170 @@
       </a>
     </div>
   </nav>
-  <div class="container pt-3">
+  <div class="container pt-3 ">
 
-
-    <div class="row justify-content-center mb-3">
-      <div class="col-lg-8 pt-2" id="divEmpresa">
-        <!-- Formulario para ingresar una nueva empresa -->
-        <h2>Ingresar nueva empresa</h2>
-        <form class="mb-3" id="form-empresa">
-          <div class="row">
-            <div class="col-md-2">
-              <label class="form-label" for="id">ID:</label>
-              <input class="form-control" type="number" id="id" name="id" required />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="nombre">Nombre:</label>
-              <input class="form-control" type="text" id="nombre" name="nombre" required />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label" for="rut">RUT:</label>
-              <input class="form-control" type="text" id="rut" name="rut" required />
-            </div>
-            <div class="col-12 mt-2 d-flex justify-content-end">
-              <button class="btn btn-primary" type="submit">
-                Agregar empresa
-              </button>
+    <div class="row justify-content-around">
+      <div class="col-4">
+        <div class="card" >
+          <div class="card-body ">
+            <h2 class="card-title">Empresas</h2>
+            <h1><span class="badge text-warning ">2</span></h1>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpresas">Registrar</button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center mb-3 ">
-      <div class="col-8 oculto pt-2" id="divFormImportacion">
-        <!-- Formulario para ingresar una nueva importación -->
-        <h2>Ingresar nueva importación</h2>
-        <form id="form-importacion" class="mb-3">
-          <div class="row">
-            <div class="col-md-4">
-              <label class="form-label" for="empresa">Empresa:</label>
-              <select class="form-control" id="empresa" name="empresa"></select>
-            </div>
-            <div class="col-md-2">
-              <label class="form-label" for="idProducto">Id Producto:</label>
-              <input class="form-control" type="number" id="idProducto" name="idProducto" required />
-            </div>
-            <div class="col-md-2">
-              <label class="form-label" for="producto">Producto:</label>
-              <input class="form-control" type="text" id="producto" name="producto" required />
-            </div>
-            <div class="col-md-2">
-              <label class="form-label" for="cantidad">Cantidad:</label>
-              <input class="form-control" type="number" id="cantidad" name="cantidad" required />
-            </div>
-            <div class="col-md-2">
-              <label class="form-label" for="precio_unitario">Precio unitario:</label>
-              <input class="form-control" type="number" id="precio_unitario" name="precio_unitario" required />
-            </div>
-            <div class="col-12 mt-2 d-flex justify-content-end">
-              <button class="btn btn-primary" type="submit">
-                Agregar importación
-              </button>
+
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-body d-flex justify-content-center ">
+            <img src="./src/img/yisus_bailando.gif" alt="YISUS BAILANDOXDXDXD">
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-4">
+        <div class="card" >
+          <div class="card-body ">
+            <h2 class="card-title">Importaciones</h2>
+            <h1><span class="badge text-warning ">5</span></h1>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#modalImportaciones">Registrar</button>
             </div>
           </div>
-        </form>
+        </div>
+      </div>
+
+    </div>
+
+    
+
+
+
+
+
+    <div class="modal fade" id="modalEmpresas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modalEmpresaContent">
+          <form class="mb-3" id="form-empresa">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-white">Ingresar nueva empresa</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class=" pt-2" id="divEmpresa">
+
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-label" for="id">ID:</label>
+                    <input class="form-control" type="number" id="id" name="id" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="nombre">Nombre:</label>
+                    <input class="form-control" type="text" id="nombre" name="nombre" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="rut">RUT:</label>
+                    <input class="form-control" type="text" id="rut" name="rut" required />
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button class="btn btn-primary" type="submit">Agregar empresa</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="modalImportaciones" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="form-importacion" class="mb-3">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5  text-white">Ingresar nueva importación</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="mb-3">
+                  <label class="form-label text-light" for="empresa">Empresa:</label>
+                  <select class="form-control" id="empresa" name="empresa"></select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-light" for="idProducto">Id Producto:</label>
+                  <input class="form-control" type="number" id="idProducto" name="idProducto" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-light" for="producto">Producto:</label>
+                  <input class="form-control" type="text" id="producto" name="producto" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-light" for="cantidad">Cantidad:</label>
+                  <input class="form-control" type="number" id="cantidad" name="cantidad" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-light" for="precio_unitario">Precio unitario:</label>
+                  <input class="form-control" type="number" id="precio_unitario" name="precio_unitario" required />
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button class="btn btn-primary" type="submit">Agregar importación</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="row oculto" id="divTablas">
       <div class="col-lg-6">
@@ -124,7 +223,7 @@
       <div class="col-1"></div>
       <div class="col-lg-5">
         <h2>Tabla importaciones por empresa</h2>
-        <table class="table table-light table-striped" >
+        <table class="table table-light table-striped">
           <thead>
             <tr>
               <th scope="col">Id Empresa</th>
@@ -134,14 +233,6 @@
             </tr>
           </thead>
           <tbody id="bodyEmpresa">
-            <!-- <tfoot>
-              <tr>
-                <th scope="col">Total</th>
-
-              </tr>
-            </tfoot> -->
-
-
           </tbody>
         </table>
       </div>
@@ -156,6 +247,9 @@
 
 
   <!-- <div id="app"></div> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
   <script type="module" src="./src/js/main.js"></script>
 </body>
 
