@@ -30,7 +30,7 @@ export class Aduana {
     }
   
     // Este método registra una nueva importación para la empresa dando su id
-    registroImport(empresaId, idProducto,producto, cantidad, precioUnitario) {
+    registroImport(empresaId, idProducto,producto, cantidad, precioUnitario, categoria,tamano) {
       // Busca la empresa con el id
       const empresa = this.obtenerEmpresaPorId(empresaId);
       // Si no existe, devuelve un error
@@ -38,7 +38,7 @@ export class Aduana {
         throw new Error('Empresa no encontrada');
       }
       // Si ya existe, agrega una nueva importación
-      empresa.agregarImport(idProducto,producto, cantidad, precioUnitario);
+      empresa.agregarImport(idProducto,producto, cantidad, precioUnitario, categoria, tamano);
     }
   
     // Este método retorna el array de importaciones de la empresa dando su id

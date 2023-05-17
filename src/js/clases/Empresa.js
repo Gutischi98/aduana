@@ -1,4 +1,5 @@
 import { Importacion } from "./Importacion";
+import { TipoImportacion } from "./TipoImportacion";
 export class Empresa {
 
   constructor(id, nombre, rut, rubro, tamano) {
@@ -54,8 +55,8 @@ export class Empresa {
   }
 
   // Agrega una nueva importación al array de importaciones
-  agregarImport(id, producto, cantidad, precioUnitario) {
-    this._importaciones.push(new Importacion(id, producto, cantidad, precioUnitario));
+  agregarImport(id, producto, cantidad, precioUnitario,categoria,tamano) {
+    this._importaciones.push(new TipoImportacion(id, producto, cantidad, precioUnitario,categoria,tamano));
   }
 
   // Este método entrega el valor total de todas las importaciones para esta empresa
@@ -63,6 +64,14 @@ export class Empresa {
     let total = 0;
     for (const datosImport of this._importaciones) {
       total += datosImport.cantidad * datosImport.precioUnitario;
+    }
+    return total;
+  }
+
+  obtenerCantidadImportaciones(){
+    let total = 0;
+    for (const datosImport of this._importaciones) {
+      total += (datosImport.cantidad*1);
     }
     return total;
   }

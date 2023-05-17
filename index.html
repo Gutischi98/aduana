@@ -8,6 +8,7 @@
   <title>Registro de Aduana</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
@@ -24,43 +25,91 @@
 
     <div class="row justify-content-around">
       <div class="col-4">
-        <div class="card" >
+        <div class="card">
           <div class="card-body ">
-            <h2 class="card-title">Empresas</h2>
-            <h1><span class="badge text-warning ">2</span></h1>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpresas">Registrar</button>
+            <div class="row">
+              <div class="col-4">
+                <div class="rounded icon-div">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-building"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z" />
+                    <path
+                      d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-8">
+                <h2 class="card-title" align="center">Empresas</h2>
+                <h1 align="center"><span class="badge" id="numeroEmpresas"></span></h1>
+
+                <div class="d-flex justify-content-end add">
+                  <svg data-bs-toggle="modal" data-bs-target="#modalEmpresas" xmlns="http://www.w3.org/2000/svg"
+                    width="48" height="48" fill="#CC8DA3" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                  </svg>
+                </div>
+              </div>
             </div>
+
+
+
           </div>
         </div>
       </div>
 
       <div class="col-3">
-        <div class="card" >
+        <div class="card" id="cardYisus">
           <div class="card-body d-flex justify-content-center ">
             <img src="./src/img/yisus_bailando.gif" alt="YISUS BAILANDOXDXDXD">
-            
+
           </div>
         </div>
       </div>
 
 
       <div class="col-4">
-        <div class="card" >
+        <div class="card">
           <div class="card-body ">
-            <h2 class="card-title">Importaciones</h2>
-            <h1><span class="badge text-warning ">5</span></h1>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#modalImportaciones">Registrar</button>
+            <div class="row">
+              <div class="col-4">
+                <div class="rounded icon-div">
+                  <svg xmlns="http://www.w3.org/2000/svg" id="importSvg" fill="currentColor"
+                    class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                    <path fill-rule="evenodd"
+                      d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-8">
+                <h2 class="card-title" align="center">Importaciones</h2>
+                <h1 align="center"><span class="badge " id="numeroImportaciones"></span></h1>
+                <div class="d-flex justify-content-end add">
+                  <svg data-bs-toggle="modal" data-bs-target="#modalImportaciones" xmlns="http://www.w3.org/2000/svg"
+                    width="48" height="48" fill="#CC8DA3" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                  </svg>
+
+                  <!-- <button class="btn btn-primary" >Registrar</button> -->
+                </div>
+              </div>
+
             </div>
+
+
+
+
           </div>
         </div>
       </div>
 
     </div>
 
-    
+
 
 
 
@@ -123,26 +172,78 @@
             </div>
             <div class="modal-body">
 
-                <div class="mb-3">
-                  <label class="form-label text-light" for="empresa">Empresa:</label>
-                  <select class="form-control" id="empresa" name="empresa"></select>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label text-light" for="idProducto">Id Producto:</label>
-                  <input class="form-control" type="number" id="idProducto" name="idProducto" required />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label text-light" for="producto">Producto:</label>
-                  <input class="form-control" type="text" id="producto" name="producto" required />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label text-light" for="cantidad">Cantidad:</label>
-                  <input class="form-control" type="number" id="cantidad" name="cantidad" required />
-                </div>
-                <div class="mb-3">
-                  <label class="form-label text-light" for="precio_unitario">Precio unitario:</label>
-                  <input class="form-control" type="number" id="precio_unitario" name="precio_unitario" required />
-                </div>
+              <div class="mb-3">
+                <label class="form-label text-light" for="empresa">Empresa:</label>
+                <select class="form-control" id="empresa" name="empresa"></select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-light" for="idProducto">Id Producto:</label>
+                <input class="form-control" type="number" id="idProducto" name="idProducto" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-light" for="producto">Producto:</label>
+                <input class="form-control" type="text" id="producto" name="producto" required />
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label text-light">Categoría</label>
+                <select class="form-control" name="" id="categoria" required>
+                  <option disabled value="" selected>Seleccione categoría</option>
+                  <option value="1">Armas de fuego, municiones, explosivos y sustancias químicas, inflamables y
+                    asfixiantes</option>
+                  <option value="1">Material escrito o audiovisual relativo a las artes marciales</option>
+                  <option value="1">Alcoholes, bebidas alcohólicas y vinagres</option>
+                  <option value="1">Productos vegetales y mercancías que tengan el carácter de peligrosas para los
+                    vegetales</option>
+                  <option value="1">Animales, productos, subproductos y despojos de origen animal o vegetal</option>
+                  <option value="1">Fertilizantes y pesticidas</option>
+                  <option value="1">Productos o subproductos alimenticios de origen animal o vegetal</option>
+                  <option value="1">Productos farmacéuticos o alimenticios de uso médico y/o cosmético</option>
+                  <option value="1">Estupefacientes y sustancias psicotrópicas que causen dependencia.</option>
+                  <option value="1">Sustancias tóxicas o peligrosas para la salud.</option>
+                  <option value="1">Eementos o materiales fértiles, fisionables o radioactivos</option>
+                  <option value="1">Recursos hidrobiológicos</option>
+                  <option value="1">Productos pesqueros</option>
+                  <option value="1">Equipos de radiocomunicaciones</option>
+                  <option value="1">Restos humanos o cenizas de incineración de los mismos</option>
+                  <option value="1">Desperdicios y desechos de pilas, baterías y acumuladores</option>
+                  <option value="1">Especies de fauna y flora silvestres protegidas</option>
+                  <option value="1">Cementos</option>
+
+                  <option value="2">Vehículos usados</option>
+                  <option value="2">Motos usadas</option>
+                  <option value="2">Neumáticos usados y recauchados</option>
+                  <option value="2">Asbesto </option>
+                  <option value="2">Estupefacientes y sustancias sicotrópicas</option>
+                  <option value="2">Productos farmacéuticos sin registro sanitario</option>
+                  <option value="2">Sustancias agotadoras de la capa de ozono</option>
+                  <option value="2">Residuos Industriales Tóxicos</option>
+                  <option value="2">Pornografía Infantil</option>
+                  <option value="2">Elementos lacrimógenos</option>
+                  <option value="2">Fuegos artificiales o artículos pirotécnicos</option>
+                  <option value="2">Materiales o sustancias radiactivas o equipos generadores de radiaciones ionizantes
+                  </option>
+                  <option value="2">Bienes Culturales</option>
+                  <option value="3">Otro</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="tamano" class="form-label text-light">Tamaño</label>
+                <select class="form-control" name="" id="tamano" required>
+                  <option disabled value="" selected>Seleccione tamaño</option>
+                  <option value="Pequeño">Pequeño</option>
+                  <option value="Mediano">Mediano</option>
+                  <option value="Grande">Grande</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-light" for="cantidad">Cantidad:</label>
+                <input class="form-control" type="number" id="cantidad" name="cantidad" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label text-light" for="precio_unitario">Precio unitario:</label>
+                <input class="form-control" type="number" id="precio_unitario" name="precio_unitario" required />
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -185,8 +286,8 @@
 
 
 
-    <div class="row oculto" id="divTablas">
-      <div class="col-lg-6">
+    <div class="row oculto tablas" id="divTablas">
+      <div class="col-12">
         <h2>Tabla importaciones general</h2>
         <table class="table table-light table-striped">
           <thead>
@@ -198,6 +299,8 @@
               <th scope="col">Id Import</th>
               <th scope="col">Producto</th>
               <th scope="col">Cantidad</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Tamaño</th>
               <th scope="col">Precio Un</th>
               <th scope="col">Subtotal</th>
             </tr>
@@ -213,6 +316,8 @@
               <th scope="col"></th>
               <th scope="col"></th>
               <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
               <th scope="col">Total</th>
               <th scope="col" id="totalGeneral"></th>
 
@@ -220,8 +325,9 @@
           </tfoot>
         </table>
       </div>
-      <div class="col-1"></div>
-      <div class="col-lg-5">
+    </div>
+    <div class="row  tablas justify-content-center">
+      <div class="col-8">
         <h2>Tabla importaciones por empresa</h2>
         <table class="table table-light table-striped">
           <thead>

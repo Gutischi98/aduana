@@ -129,7 +129,7 @@ input[type=number] {
  
 }
 #divEmpresa label, #divEmpresa h2,
-#divFormImportacion label, #divFormImportacion h2, #divTablas h2{
+#divFormImportacion label, #divFormImportacion h2, .tablas h2{
   color: white;
 }
 
@@ -148,6 +148,65 @@ button:hover{
   background-color: #a17082!important;
   border-color: #a17082!important;
 }
+
+
+.icon-div{
+  /* position: absolute;
+  top: 7px;
+  left: 266px;
+  width: 123px;
+  right: 20px;
+  height: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #6babe3; */
+  /* #CCC364 */
+}
+.icon-div svg{
+  height: 9rem;
+  fill: #CCC364;
+}
+#importSvg{
+  fill: #8397CC;
+}
+.add svg{
+  cursor: pointer;
+  transition: .5s;
+}
+
+
+.add svg:hover{
+
+  fill: #9c687a;
+  
+}
+#numeroEmpresas{
+  color: #CCC364;
+  font-size: 5rem;
+  padding: 0;
+}
+#numeroImportaciones{
+  color: #8397CC;
+  font-size: 5rem;
+  padding: 0;
+}
+.card-body  h2{
+  /* font-family: monospace!important; */
+  font-weight: bolder;
+}
+.card{
+  border-radius: 16px!important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)!important;
+}
+#cardYisus{
+  border: solid #78bbcb!important;
+  background-color: #78bbcb!important;
+  box-shadow: none!important;
+}
+
+
+
 
 /* 
 .oculto {
